@@ -14,9 +14,10 @@
       {% if user.is_authenticated %}
       <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
       {% endif %}
-      <div class="logo">
-         <h1><a href="/">Travel with T.</a></h1>
-      </div>
+         <div class="logo">
+            <h1><a href="/">Travel with T.</a></h1>
+         </div>
+
         <header>
             <nav>
                <ul class="nav__links">
@@ -41,8 +42,8 @@
                 {% endblock %}
                 </div>
             </div>
-
         </div>
+
         <div id="slider">
             <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
