@@ -10,10 +10,9 @@
         <p>{{ post.text|linebreaksbr }}</p> 
         <br>
         <div class="category">
-            {{post.category }}
-        </div>
-        <div class="country">
-            {{post.country }}
+            {{post.category}}
+            <br>
+            {{post.location}}
         </div>
         {% if post.published_date %}
             <div class="date">

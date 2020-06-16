@@ -41,12 +41,12 @@ li, a {
 }
 
 .top-menu a:hover {
+   color: rgb(0, 30, 255);
    font-size: 10pt;
    display: flex;
    justify-content: flex-end;
    align-items: center;
    padding: 10px 10%;
-   color: rgb(0, 30, 255);
 }
 
 header {

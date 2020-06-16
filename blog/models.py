@@ -17,7 +17,7 @@ class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     category = models.CharField(max_length=200, default ="uncategorized")
-    country = models.CharField(max_length=200, default ="uncategorized")
+    location = models.CharField(max_length=200, default ="uncategorized")
     text = models.TextField()
     thumb = models.ImageField(default='default.png', blank=True)
     created_date = models.DateTimeField(default=timezone.now)
