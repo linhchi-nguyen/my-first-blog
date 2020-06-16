@@ -7,7 +7,7 @@ h1, h2, h3, h4 {
     font-family: 'Oswald', cursive;
 }
 
-.date {
+.date, .category, .country {
     color: #828282;
 }
 
@@ -26,4 +26,5 @@ h1, h2, h3, h4 {
 .post h2 a, .post h2 a:visited {
     color: #000000;
 }
+
 
