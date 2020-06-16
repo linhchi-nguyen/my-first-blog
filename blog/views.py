@@ -45,3 +45,10 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+def about(request):
+    return render(request, 'blog/about.html', {})
+
+def map(request):
+    return render(request, 'blog/map.html', {})
+
+

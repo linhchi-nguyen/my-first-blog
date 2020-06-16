@@ -19,4 +19,5 @@ class PostForm(forms.ModelForm):
              'text': forms.Textarea(attrs={'class': 'form-control'}),
              'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
              'country': forms.TextInput(attrs={'class': 'form-control'}),
+             
          }

@@ -4,6 +4,9 @@
     <div class="post">
         <h2>{{ post.title }}</h2>
         <br>
+        <img src="{{post.thumb.url}}" alt="{{post.title}}" width="50%"/>
+        <br>
+        <br>
         <p>{{ post.text|linebreaksbr }}</p> 
         <br>
         <div class="category">

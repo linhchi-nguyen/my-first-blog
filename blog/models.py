@@ -19,6 +19,7 @@ class Post(models.Model):
     category = models.CharField(max_length=200, default ="uncategorized")
     country = models.CharField(max_length=200, default ="uncategorized")
     text = models.TextField()
+    thumb = models.ImageField(default='default.png', blank=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
