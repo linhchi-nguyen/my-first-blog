@@ -53,8 +53,8 @@ def post_remove(request, pk):
 def about(request):
     return render(request, 'blog/about.html', {})
 
-def map(request):
-    return render(request, 'blog/map.html', {})
+def todo(request):
+    return render(request, 'blog/list.html', {})
 
 
 

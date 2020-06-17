@@ -22,7 +22,7 @@
         <header>
             <nav>
                <ul class="nav__links">
-                  <li><a href="map.html">Map</a></li>
+                  <li><a href="list.html">Checklist</a></li>
                   <div class="dropdown">
                      <li> <a href="/">Posts</a></li>
                      <div class="dropdown-content">
@@ -39,6 +39,21 @@
         <div class="content container">
             <div class="row">
                 <div class="col-sm">
+                  <div id="myDIV" class="todo">
+                     <h2>My To Do List</h2>
+                     
+                     <input type="text" id="myInput" placeholder="To-Do...">
+                     <span onclick="newElement()" class="addBtn">Add</span>
+                   </div>
+                   
+                   <ul id="myUL">          
+                     <li class="checked">Plan the Route</li>
+                     <li>Book Tickets </li>
+                     <li>Get a Visa</li>
+                     <li>Book first Accommodation</li>
+                     <li>Plan Activities</li>
+                     <li>Write Blogpost about needed Visa</li>
+                   </ul>
                 </div>
             </div>
         </div>
