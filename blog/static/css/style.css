@@ -15,6 +15,7 @@ li, a {
 
 }
 
+/* logo */
 .logo {
    display: flex;
    justify-content: flex-start;
@@ -31,6 +32,7 @@ li, a {
    color:rgb(0, 30, 255);
 }
 
+/* Add Post */
 .top-menu, .top-menu:visited {
    font-size: 10pt;
    color: #000;
@@ -49,6 +51,7 @@ li, a {
    padding: 10px 10%;
 }
 
+/* Header*/
 header {
    display: flex;
    justify-content: flex-end;
@@ -56,6 +59,7 @@ header {
    padding: 0px 10%;
 }
 
+/* Menu */
 .nav__links {
     list-style: none;
 }
@@ -75,6 +79,7 @@ header {
    font-size: 20px;
 }
 
+/* Dropdown*/
 .dropdown {
    position: relative;
    display: inline-block;
@@ -97,6 +102,7 @@ header {
    color: rgb(0, 30, 255);
  }
 
+ /* content */
 .content {
    display: grid;
    grid-template-columns: 1fr repeat(12, minimax(auto, 60px)) 1fr;
@@ -115,6 +121,9 @@ header {
    display: flex;
    flex-direction: column;
 }
+
+
+/* Slideshow*/
 
 #slider {
     margin: 0 auto;
@@ -144,6 +153,7 @@ header {
     overflow: hidden;
  }
 
+ 
  #slide1:checked ~ #slides .inner {
     margin-left: 0;
  }
@@ -269,6 +279,8 @@ header {
        margin: 0 auto;
     }
  }
+
+ /* footer */
  
 footer {
    display: flex;
@@ -301,6 +313,7 @@ footer {
    display: inline-block;
    padding: 0px 20px;
 }
+
 * {
    box-sizing: border-box;
  }
@@ -312,13 +325,14 @@ footer {
  }
  
  /* Style the list items */
- ul li {
+ #myUL li {
    cursor: pointer;
    position: relative;
    padding: 12px 8px 12px 40px;
    background: #eee;
    font-size: 18px;
    transition: 0.2s;
+   list-style: none;
  
    /* make the list items unselectable */
    -webkit-user-select: none;
@@ -328,24 +342,24 @@ footer {
  }
  
  /* Set all odd list items to a different color (zebra-stripes) */
- ul li:nth-child(odd) {
+ #myUL li:nth-child(odd) {
    background: #f9f9f9;
  }
  
  /* Darker background-color on hover */
- ul li:hover {
+#myUL li:hover {
    background: #ddd;
  }
  
  /* When clicked on, add a background color and strike out text */
- ul li.checked {
+ #myUL li.checked {
    background: #888;
    color: #fff;
    text-decoration: line-through;
  }
  
  /* Add a "checked" mark when clicked on */
- ul li.checked::before {
+ #myUL li.checked::before {
    content: '';
    position: absolute;
    border-color: #fff;
@@ -415,3 +429,13 @@ footer {
    background-color: #bbb;
  }
  
+/* remove button x */
+.removebtn {
+   color: grey;
+   float:right;
+}
+
+.removebtn a:hover {
+   color: rgb(0, 30, 255);
+   float:right;
+}

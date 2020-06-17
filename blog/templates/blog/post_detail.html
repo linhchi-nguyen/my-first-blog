@@ -14,7 +14,6 @@
                 {{ post.published_date }}
             </div>
         {% endif %}
-        <a class="removebtn" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         <br>
         <img src="{{post.thumb.url}}" alt="{{post.title}}" width="50%"/>
         <br>
@@ -33,6 +32,7 @@
             <li>Booking Tickets </li>
           </ul>
         <br>
+        <a class="removebtn" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
         {% if user.is_authenticated %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
     {% endif %} 
