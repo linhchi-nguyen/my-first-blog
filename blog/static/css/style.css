@@ -371,7 +371,7 @@ footer {
    height: 15px;
    width: 7px;
  }
- 
+
  /* Style the header */
  .todo {
    background-color: whitesmoke;
@@ -413,7 +413,7 @@ footer {
  }
  
  .addBtn:hover {
-   background-color: #bbb;
+   background-color: #ccc;
  }
  
 /* remove button x */
