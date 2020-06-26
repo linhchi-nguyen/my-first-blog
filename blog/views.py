@@ -50,10 +50,10 @@ def post_remove(request, pk):
     post.delete()
     return redirect('post_list')
 
-def about(request):
+def about(request, pk):
     return render(request, 'blog/about.html', {})
 
-def todo(request):
+def todo(request, pk):
     return render(request, 'blog/checklist.html', {})
 
 
