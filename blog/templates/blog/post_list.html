@@ -1,39 +1,20 @@
 {% extends 'blog/base.html' %}
-{% load static %}
-<html>
-    <head>
-        <title>Travel with T./title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="//fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">Travel with T.</a></h1>
-        </div>
 
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                        {% for post in posts %}
-                            <div class="post">
-                                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                                <br>
-                                <img src="{{post.thumb.url}}" alt="{{post.title}}" width="30%"/>
-                                <br>
-                                <br>
-                                <p>{{ post.text|linebreaksbr }}</p>
-                                <div class="date">
-                                    <p>published: {{ post.published_date }} | {{post.location}}</p>
-                                </div>
-                            </div>
-                    {% endfor %}
-                {% endblock %}
+{% block content %}
+    {% for post in posts %}
+        <div class="postlist">
+            <div class="card">
+                <div class="post_img">
+                    <img src="{{post.thumb.url}}" alt="{{post.title}}">
+                </div>
+                <div class="post_info">
+                    <div class="date">
+                        <span>published: {{ post.published_date }} | {{post.location}}</span>
+                    </div>
+                    <h2 class="post_title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                    <p class="post_text">{{ post.text|linebreaksbr }}</p>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    {% endfor %}
+{% endblock %}

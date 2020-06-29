@@ -102,25 +102,123 @@ header {
    color: rgb(0, 30, 255);
  }
 
- /* content */
+/* content */
 .content {
-   display: grid;
-   grid-template-columns: 1fr repeat(12, minimax(auto, 60px)) 1fr;
-   grid-gap: 40px;
+   padding: 60px;
 }
 
-.row {
-   grid-column: 2 / span 3;
-   display: grid;
-   grid-template-columns: repeat(3, minimax(auto, 60px));
-   grid-gap: 40px;
-}
-
-.col-sm {
-   grid-column-end: span 3;
+.postlist {
+   width: 100%;
+   height: 100vh;
    display: flex;
-   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   padding: 0 1.5rem;
 }
+
+.card {
+   width: 100%;
+   max-width: 98rem;
+   padding: 5rem;
+   background-color: rgb(239, 239, 239);
+   box-shadow: 0 1.4 8rem rgba(0,0,0,.2);
+   display: flex;
+   align-items: center;
+   border-radius: .9rem;
+
+}
+
+.post_img {
+   min-width: 40rem;
+   max-width: 40rem;
+   height: 30rem;
+   transform: translateX(-8rem);
+   position: relative;
+}
+
+.post_img img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+   border-radius: .9rem;
+}
+
+.post_info {
+   font-size: 2.5rem;
+   margin: 1.5rem 0 2rem;
+}
+
+.post_info a:hover{
+   color: rgb(0, 30, 255);
+ }
+
+.date span {
+   display: block;
+   color: #828282;
+   font-size: 1.3rem;
+   margin: .5rem 0;
+}
+
+.post_title {
+   font-size: 2.5rem;
+   margin: 1.5rem 0;
+   text-transform: uppercase;
+   color: #000;
+}
+
+.post_text {
+   margin-bottom: 3rem;
+   font-size: 1.4rem;
+   color: #000;
+}
+
+@media screen and (max-width: 1080px) {
+   .card {
+      max-width: 80rem;
+   }
+
+   .post_img {
+      min-width: 30rem;
+      max-width: 30rem;
+   }
+}
+
+@media screen and (max-width: 868px) {
+   .card {
+      max-width: 70rem;
+   }
+
+   .post_img {
+      min-width: 100%;
+      max-width: 100%;
+      transform: translate(0,-8rem);
+   }
+}
+
+@media screen and (max-width: 868px) {
+   .postlist{
+      flex-direction: column;
+      padding: 4.5rem 6rem 3rem 0;
+   }
+
+   .card {
+      flex-direction: column;
+      padding: 0 1.5rem;
+   }
+
+   .post_img {
+      min-width: 100%;
+      max-width: 100%;
+      transform: translate(0,-8rem);
+   }
+
+   .date span {
+      margin-top: 0;
+   }
+}
+
+
 
 
 /* Slideshow*/
