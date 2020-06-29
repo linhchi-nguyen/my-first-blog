@@ -59,20 +59,65 @@ header {
    padding: 0px 10%;
 }
 
+nav ul li {
+  display: inline;
+}
+/*hamburger*/
+.navigation {
+  border-bottom: 1px solid #EAEAEB;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+}
+
 /* Menu */
 .nav__links {
     list-style: none;
+    margin: 0 30px 0 0;
 }
 
-.nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
+.nav__links a {
+  clear: right;
+  text-decoration: none;
+  margin: 0 10px;
+  line-height: 70px;
+}
+
+label {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 26px;
+  float: right;
+}
+#toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 986px) {
+  label {
+    display: block;
+    cursor: pointer;
+  }
+  .nav__links {
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+  .nav__links a {
+    display: block;
+    margin: 0;
+  }
+  #toggle:checked + .nav__links {
+    display: block;
+  }
 }
 
 .nav__links li a:hover {
     color:rgb(0, 30, 255);
 }
- 
+
 .nav__links button {
    background:none;
    border: none;
@@ -84,7 +129,7 @@ header {
    position: relative;
    display: inline-block;
  }
- 
+
  .dropdown-content {
    display: none;
    position: absolute;
@@ -93,7 +138,7 @@ header {
    padding: 12px 16px;
    z-index: 1;
  }
- 
+
  .dropdown:hover .dropdown-content {
    display: block;
  }
@@ -251,7 +296,7 @@ header {
     overflow: hidden;
  }
 
- 
+
  #slide1:checked ~ #slides .inner {
     margin-left: 0;
  }
@@ -354,7 +399,7 @@ header {
     background: #000;
     margin: 0 10px;
  }
- 
+
  #slide1:checked ~ #bullets label:nth-child(1),
  #slide2:checked ~ #bullets label:nth-child(2),
  #slide3:checked ~ #bullets label:nth-child(3),
@@ -379,7 +424,7 @@ header {
  }
 
  /* footer */
- 
+
 footer {
    display: flex;
    justify-content: center;
@@ -415,13 +460,13 @@ footer {
 * {
    box-sizing: border-box;
  }
- 
+
  /* Remove margins and padding from the list */
  ul {
    margin: 0;
    padding: 0;
  }
- 
+
  /* Style the list items */
  #myUL li {
    cursor: pointer;
@@ -431,31 +476,31 @@ footer {
    font-size: 18px;
    transition: 0.2s;
    list-style: none;
- 
+
    /* make the list items unselectable */
    -webkit-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
  }
- 
+
  /* Set all odd list items to a different color (zebra-stripes) */
  #myUL li:nth-child(odd) {
    background: #f9f9f9;
  }
- 
+
  /* Darker background-color on hover */
 #myUL li:hover {
    background: #ddd;
  }
- 
+
  /* When clicked on, add a background color and strike out text */
  #myUL li.checked {
    background: #ccc;
    color: #fff;
    text-decoration: line-through;
  }
- 
+
  /* Add a "checked" mark when clicked on */
  #myUL li.checked::before {
    content: '';
@@ -477,14 +522,14 @@ footer {
    color:black;
    text-align: center;
  }
- 
+
  /* Clear floats after the header */
  .todo:after {
    content: "";
    display: table;
    clear: both;
  }
- 
+
  /* Style the input */
  input {
    margin: 0;
@@ -495,7 +540,7 @@ footer {
    float: left;
    font-size: 16px;
  }
- 
+
  /* Style the "Add" button */
  .addBtn {
    padding: 10px;
@@ -509,11 +554,11 @@ footer {
    transition: 0.3s;
    border-radius: 0;
  }
- 
+
  .addBtn:hover {
    background-color: #ccc;
  }
- 
+
 /* remove button x */
 .removebtn {
    color: grey;
