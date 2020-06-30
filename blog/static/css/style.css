@@ -52,6 +52,7 @@ li, a {
 }
 
 /* Header*/
+
 header {
    display: flex;
    justify-content: flex-end;
@@ -61,13 +62,6 @@ header {
 
 nav ul li {
   display: inline;
-}
-/*hamburger*/
-.navigation {
-  border-bottom: 1px solid #EAEAEB;
-  text-align: right;
-  height: 70px;
-  line-height: 70px;
 }
 
 /* Menu */
@@ -81,37 +75,6 @@ nav ul li {
   text-decoration: none;
   margin: 0 10px;
   line-height: 70px;
-}
-
-label {
-  margin: 0 40px 0 0;
-  font-size: 26px;
-  line-height: 70px;
-  display: none;
-  width: 26px;
-  float: right;
-}
-#toggle {
-  display: none;
-}
-
-@media only screen and (max-width: 986px) {
-  label {
-    display: block;
-    cursor: pointer;
-  }
-  .nav__links {
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-  .nav__links a {
-    display: block;
-    margin: 0;
-  }
-  #toggle:checked + .nav__links {
-    display: block;
-  }
 }
 
 .nav__links li a:hover {
