@@ -531,11 +531,6 @@ footer {
    float:left;
 }
 
-<<<<<<< HEAD
-.removebtn a:hover {
-   color: rgb(0, 30, 255);
-   float:right;
-=======
 .editbtn {
    color: black;
    float: left;
@@ -632,5 +627,4 @@ hr {
 
 .modalcontainer{
    text-align: center;
->>>>>>> 02b387e5a91ce2e561bb325e1a96d139d8b4cf94
 }
