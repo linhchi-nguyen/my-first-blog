@@ -526,36 +526,33 @@ footer {
  }
 
 /* remove button x */
-.removebtn {
+.editbtn {
    color:black;
    float:left;
+   font-size: 1.5rem;
 }
 
-.editbtn {
+.editbtn:hover {
+   color: rgb(0, 30, 255);
+}
+
+.removebtn {
    color: black;
    float: left;
    margin-left: 20px;
+   font-size: 1.5rem;
 }
 
-.category {
-   margin-top: 40;
+.removebtn:hover {
+   color: rgb(0, 30, 255);
+}
+
+.deletepost {
+   margin-left: 20px;
 }
 
 
 * {box-sizing: border-box}
-
-/* Set a style for all buttons */
-button {
-   padding: 14px 20px;
-   margin: 8px 0;
-   border: none;
-   cursor: pointer;
-   width: 50%;
- }
-
-button:hover {
-  opacity:1;
-}
 
 /* Float cancel and delete buttons and add an equal width */
 .cancelbtn, .deletebtn {
@@ -563,42 +560,25 @@ button:hover {
   width: 50%;
 }
 
-/* Add a color to the cancel button */
-.cancelbtn {
-  background-color: #ccc;
-  color: black;
-}
-
-/* Add a color to the delete button */
-.deletebtn {
-  background-color: #f44336;
-}
-
 
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
+  z-index: 2; /* Sit on top */
+  left:0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  padding-top: 50px;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+  width: 50%; /* Could be more or less, depending on screen size */
 }
 
 /* The Modal Close Button (x) */

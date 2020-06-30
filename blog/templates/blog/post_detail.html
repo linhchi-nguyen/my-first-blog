@@ -4,10 +4,6 @@
 <div class="row">
     <div class="post">
         <h2>{{ post.title }}</h2>
-       {% if user.is_authenticated %}
-        <a class="removebtn" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
-        <a class="editbtn" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-       {% endif %}
         <div class="category">
             {{post.category}}
             <br>
@@ -23,7 +19,11 @@
         <br>
         <br>
         <p>{{ post.text|linebreaksbr }}</p> 
-        <br>      
+        <br>  
+        {% if user.is_authenticated %}
+        <a class="editbtn" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        <a class="removebtn" href="{% url 'post_remove' pk=post.pk %}"><span class="glyphicon glyphicon-trash"></span></a>
+       {% endif %}    
     </div>
 </div>
 {% endblock %}
