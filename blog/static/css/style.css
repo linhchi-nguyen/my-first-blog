@@ -413,6 +413,16 @@ footer {
    padding: 0px 20px;
 }
 
+@media screen and (max-width: 500px) {
+   .icons {
+      width: 7rem;
+   }
+
+   .icons li {
+      padding-top: .8rem;
+   }
+}
+
 * {
    box-sizing: border-box;
  }
