@@ -202,9 +202,15 @@ header {
 }
 
 @media screen and (max-width: 868px) {
+   .nav__links {
+      padding:2.5rem 2rem 0 0;
+   }
+   .content {
+      padding:5rem 5.5rem 0 0;
+   }
+
    .postlist{
       flex-direction: column;
-      padding: 4.5rem 6rem 3rem 0;
    }
 
    .card {
@@ -409,13 +415,9 @@ footer {
 #copyright {
    text-align: center;
    align-items: center;
-   padding: 10px;
+   padding: 1rem 0 0 0;
 }
 
-#copyright li {
-   display: inline-block;
-   padding: 0px 20px;
-}
 
 @media screen and (max-width: 500px) {
    .icons {
@@ -423,7 +425,7 @@ footer {
    }
 
    .icons li {
-      padding-top: .8rem;
+      padding:2rem 2rem 0 0;
    }
 }
 
