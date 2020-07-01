@@ -12,7 +12,8 @@
                         <span>published: {{ post.published_date }} | {{post.location}}</span>
                     </div>
                     <h2 class="post_title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                    <p class="post_text">{{ post.text|linebreaksbr }}</p>
+                    <p class="post_text">{{ post.text|linebreaksbr|truncatewords:"50" }}</p>
+                    <p class="read_more"><a href="{% url 'post_detail' pk=post.pk %}">read more >></a></p>
                 </div>
             </div>
         </div>
