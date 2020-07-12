@@ -3,12 +3,15 @@
 {% block content %}
 <div class="center-column">
 <h3> To-Do List</h3>
+<br>
 <form method="POST" class="add-task">
   {% csrf_token %}
+  {% if user.is_authenticated %}
   {{form.todo}}
   <input class="add btn-sm" type="submit" value="Add">
+  {% endif %}
 </form>
-
+<br>
   {% for task in tasks %}
    <div class="item-row">
      {% if task.done == True %}
@@ -17,9 +20,10 @@
      <span>{{task}}</span>
      {% endif %}
 
+    {% if user.is_authenticated %}
      <a class ="delete btn-sm "href="{% url 'delete' task.id %}">Delete</a>
      <a class ="edit btn-sm " href="{% url 'todo_detail' task.id %}">Edit</a>
-
+     {% endif %}
    </div>
   {% endfor %}
 </div>
