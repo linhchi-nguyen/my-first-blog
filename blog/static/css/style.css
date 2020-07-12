@@ -624,3 +624,28 @@ h4 {
    color: #fff;
    text-decoration-line: underline;
 }
+
+@media screen and (max-width: 1080px) {
+   .center-column {
+      max-width: 80rem;
+      margin: 0;
+      margin-bottom: 70px;
+      padding: 40px 40px 40px 40px;
+   }
+
+   .item-row {
+      padding: 40px;
+   }
+}
+
+
+@media screen and (max-width: 500px) {
+   .edit{
+      margin: 5px 20px 0px 10px;
+   
+   }
+
+   .delete{
+      margin: 5px 20px 0px 10px;
+   }
+}
