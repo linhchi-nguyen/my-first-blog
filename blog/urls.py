@@ -9,11 +9,12 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),
-    path('about.html',views.about, name="about"),
-    path('checklist.html',views.checklist, name="checklist"),
-    path('check', views.check_detail, name='check_detail'),
-    path('abouts', views.abouts_detail, name='abouts_detail'),
     path('post/<pk>/remove/', views.post_remove, name='post_remove'),
+    path('about.html',views.about, name='about'),
+    path('abouts', views.abouts_detail, name='abouts_detail'),
+    path('checklist.html',views.todolist, name='checklist'),
+    path('todo_detail/<int:pk>/', views.todo_detail, name='todo_detail'),
+    path('delete/<int:pk>/', views.deleteTask, name='delete'),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

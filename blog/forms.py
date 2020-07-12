@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Category
+from .models import Post, Category, Task
 
 choices = Category.objects.all().values_list('name', 'name')
 
@@ -21,3 +21,11 @@ class PostForm(forms.ModelForm):
              'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
              'location': forms.TextInput(attrs={'class': 'form-control'}),
          }
+
+
+class TaskForm(forms.ModelForm):
+    todo= forms.CharField(widget= forms.TextInput(attrs={'placeholder': 'Add new task...'}))
+
+    class Meta:
+        model = Task
+        fields = ('__all__')

@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="center-column">
+<h4> Are you sure you want to delete "{{item}}"?</h4>
+<br>
+<a class ="cancel btn-sm " href = "{% url 'checklist' %}">Cancel</a>
+
+<form method="POST">
+    {% csrf_token %}
+    <input class="confirm btn-sm" type="submit" value="Confirm">
+</form>
+</div>
+{% endblock %}

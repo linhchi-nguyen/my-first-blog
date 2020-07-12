@@ -249,9 +249,6 @@ header {
    }
 }
 
-
-
-
 /* Slideshow*/
 
 #slider {
@@ -453,116 +450,6 @@ footer {
    box-sizing: border-box;
  }
 
- /* Remove margins and padding from the list */
- ul {
-   margin: 0;
-   padding: 0;
- }
-
- /* Style the list items */
- #myUL li {
-   cursor: pointer;
-   position: relative;
-   padding: 12px 8px 12px 40px;
-   background: #eee;
-   font-size: 18px;
-   transition: 0.2s;
-   list-style: none;
-
-   /* make the list items unselectable */
-   -webkit-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none;
-   user-select: none;
- }
-
- /* Set all odd list items to a different color (zebra-stripes) */
- #myUL li:nth-child(odd) {
-   background: #f9f9f9;
- }
-
- /* Darker background-color on hover */
-#myUL li:hover {
-   background: #ddd;
- }
-
- /* When clicked on, add a background color and strike out text */
- #myUL li.checked {
-   background: #ccc;
-   color: #fff;
-   text-decoration: line-through;
- }
-
- /* Add a "checked" mark when clicked on */
- #myUL li.checked::before {
-   content: '';
-   position: absolute;
-   border-color: #fff;
-   border-style: solid;
-   border-width: 0 2px 2px 0;
-   top: 10px;
-   left: 16px;
-   transform: rotate(45deg);
-   height: 15px;
-   width: 7px;
- }
-
- .close {
-   position: absolute;
-   right: 0;
-   top: 0;
-   padding: 12px 16px 12px 16px;
- }
- 
- .close:hover {
-   background-color: #f44336;
-   color: white;
- }
- /* Style the header */
- .checklist {
-   background-color: whitesmoke;
-   padding: 30px 40px;
-   color:black;
-   text-align: center;
- }
-
- /* Clear floats after the header */
- .checklist:after {
-   content: "";
-   display: table;
-   clear: both;
- }
-
- /* Style the input */
- input {
-   margin: 0;
-   border: none;
-   border-radius: 0;
-   width: 75%;
-   padding: 10px;
-   float: left;
-   font-size: 16px;
- }
-
- /* Style the "Add" button */
- .addBtn {
-   padding: 10px;
-   width: 25%;
-   background: #d9d9d9;
-   color: #555;
-   float: left;
-   text-align: center;
-   font-size: 16px;
-   cursor: pointer;
-   transition: 0.3s;
-   border-radius: 0;
- }
-
- .addBtn:hover {
-   background-color: #ccc;
- }
-
-
 /* remove/edit/delete button x */
 .editbtn {
    padding-top: 0;
@@ -591,4 +478,149 @@ footer {
 }
 
 
+/* Checkliste */
 
+h3 {
+   text-align: center;
+   font-size: 35px;
+}
+
+h4 {
+   text-align: center;
+   font-size: 25px;
+}
+
+.add-task input {
+   margin: 5px;
+   padding: 10px;
+   border-style: none;
+   text-align: center;
+   width: 100%;
+   font-family: 'Oswald';
+}
+
+.input::placeholder {
+   color: #828282;
+}
+
+.add {
+   background-color: rgb(57, 57, 57);
+   color:#fff;
+}
+
+.add:hover {
+   background-color: rgb(0, 30, 255);
+   color: #fff;
+   text-decoration-line: underline;
+}
+
+.center-column{
+   border-radius: 3px;
+   margin: 0 20px 0 175px;
+   max-width: 80%;
+   padding: 40px 40px 40px 40px;
+   background-color: rgb(242, 242, 242);
+}
+
+.item-row {
+   margin: 10px;
+   padding: 20px;
+   border-radius: 3px;
+   color: #000;
+   font-size: 16px;
+   background-color:#fff;
+   font-family: 'Oswald';
+}
+
+.line {
+   text-decoration-line: line-through;
+   text-decoration-color: rgb(0, 30, 255);
+   text-decoration-thickness: 2px;
+   text-transform: capitalize;
+}
+
+.edit {
+   border-style: none;
+   background-color:rgb(57, 57, 57);
+   padding-top: 5px;
+   margin-right: 10px;
+   color: #fff;
+   float:right;
+}
+
+.edit:hover {
+   background-color: rgb(0, 30, 255);
+   border-color:rgb(0, 30, 255);
+   color: #fff;
+   text-decoration-line: underline;
+}
+
+.delete {
+   background-color: rgb(57, 57, 57);
+   padding-top: 5px;
+   color:#fff;
+   float:right;
+}
+
+.delete:hover {
+   background-color: rgb(0, 30, 255);
+   border-color:rgb(0, 30, 255);
+   color: #fff;
+}
+
+.edit-task input {
+   margin: 5px;
+   padding: 10px;
+   border-style: none;
+   text-align: center;
+   width: 100%;
+   font-family: 'Oswald';
+}
+
+.edit-task{
+   margin-bottom: 50px;
+}
+
+.edittask {
+   background-color: #000;
+   color:#fff;
+   width: 50%;
+   float: left;
+   text-align: center;
+}
+
+.edittask:hover {
+   background-color: rgb(0, 30, 255);
+   color: #fff;
+   text-decoration-line: underline;
+}
+
+.cancel{ 
+   background-color: #000;
+   padding-top: 5px;
+   color:#fff;
+   width: 50%;
+   float: left;
+   text-align: center;
+}
+
+.cancel:hover {
+   background-color: rgb(0, 30, 255);
+   color: #fff;
+}
+
+.confirm{ 
+   background-color: #000;
+   padding-top: 5px;
+   color:#fff;
+   width: 50%;
+   float:right;
+   border-style: none;
+   font-family: 'Oswald';
+}
+
+.confirm:hover {
+   background-color: rgb(255, 0, 0);
+   color: #fff;
+   text-decoration-line: underline;
+}

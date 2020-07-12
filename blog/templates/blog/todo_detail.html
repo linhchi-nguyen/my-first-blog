@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="center-column">
+<h4> Edit Task</h4>
+
+<form method="POST" class="edit-task">
+{% csrf_token %}
+
+{{form}}
+<input class="edittask btn-sm" type="submit" value="Edit">
+</form>
+</div>
+{% endblock %}
