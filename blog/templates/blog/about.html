@@ -1,122 +1,24 @@
+{% extends 'blog/base.html' %}
 {% load static %}
-<html>
-    <head>
-        <title>Travel with T</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="//fonts.googleapis.com/css2?family=Oswald:wght@500&display=swapt" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    
-    <body>
-      {% if user.is_authenticated %}
-      <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-      {% endif %}
-         <div class="logo">
-            <h1><a href="/">Travel with T.</a></h1>
-         </div>
 
-        <header>
-            <nav>
-               <ul class="nav__links">
-                  <li><a href="checklist.html">Checklist</a></li>
-                  <div class="dropdown">
-                     <li> <a href="/">Posts</a></li>
-                     <div class="dropdown-content">
-                        <a href="#">Countries</a>
-                        <a href="#">Preparations</a>
-                        <a href="#">Activities</a>
-                     </div>
-                  </div>
-                  <li> <a href="about.html">About</a></li>
-                  <button type="submit"><i class="fa fa-search"></i></button>
-               </ul>
-            </nav>
-         </header>
-        <div class="content container">
-            <div class="row">
-                <div class="col-sm">
-                   <h2>About me</h2>
-                   <br>
-                     <img src="{% static 'image/thomas.png' %}" alt="Thomas" width="40%"/>
-                     <br>
-                     <br>
-                     <p> Hallo, ich bin Thomas, 19 Jahre alt, bin Student und würde Euch gerne auf meine geplante Rucksacktour durch Südamerika mitnehmen.
-                        Da ich weiß, wie schwierig es ist. am Anfang eine Reise zu planen und ich selbst noch vieles zu lernen habe, 
-                        wird dieser Blog hoffentlich nicht nur dazu sein, meine Reise zu strukturieren und zu dokumentieren, sondern auch um anderen Reiseinteressierten 
-                        weiterzuhelfen.
-                    </p>
-                    <p> Hi, I'm Thomas, 19 years old, a student and would like to take you guys on my backpacking journey through South America.
-                        I know that it is quite hard to organise trips and I myself still have a lot to learn, which is why I've started this blog not 
-                        only as a way to prepare, plan, structure and to documente my trip, but hopefully also as a way to help other travel enthusiasts, 
-                        who are planning on doing the same.</p>
-                </div>
-            </div>
-        </div>
+{% block content %}
 
-        <div id="slider">
-            <input type="radio" name="slider" id="slide1" checked>
-            <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3">
-            <input type="radio" name="slider" id="slide4">
-            <div id="slides">
-               <div id="overflow">
-                  <div class="inner">
-                     <div class="slide slide_1">
-                        <div class="slide-content">
-                           <h2>Slide 1</h2>
-                           <p>Content for Slide 1</p>
-                        </div>
-                     </div>
-                     <div class="slide slide_2">
-                        <div class="slide-content">
-                           <h2>Slide 2</h2>
-                           <p>Content for Slide 2</p>
-                        </div>
-                     </div>
-                     <div class="slide slide_3">
-                        <div class="slide-content">
-                           <h2>Slide 3</h2>
-                           <p>Content for Slide 3</p>
-                        </div>
-                     </div>
-                     <div class="slide slide_4">
-                        <div class="slide-content">
-                           <h2>Slide 4</h2>
-                           <p>Content for Slide 4</p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div id="controls">
-               <label for="slide1"></label>
-               <label for="slide2"></label>
-               <label for="slide3"></label>
-               <label for="slide4"></label>
-            </div>
-            <div id="bullets">
-               <label for="slide1"></label>
-               <label for="slide2"></label>
-               <label for="slide3"></label>
-               <label for="slide4"></label>
-            </div>
-         </div>
-    </body>
-
-    <footer>
-        <ul class="icons">
-          <li><a href="https://www.youtube.com/"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-          <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-          <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        </ul>
-        <div id="copyright"></div>
-            <p>&copy; 2020 Copyright: Travel with T. </p>
-          </div>
-      </footer>
-</html>
-
+   <h2>About me</h2>
+   <br>
+   <img src="{% static 'image/thomas.png' %}" alt="Thomas" width="40%"/>
+   <br>
+   <br>
+   <p> Hallo, ich bin Thomas, 19 Jahre alt, bin Student und würde Euch gerne auf meine geplante Rucksacktour durch Südamerika mitnehmen.
+         Da ich weiß, wie schwierig es ist. am Anfang eine Reise zu planen und ich selbst noch vieles zu lernen habe, 
+         wird dieser Blog hoffentlich nicht nur dazu sein, meine Reise zu strukturieren und zu dokumentieren, sondern auch um anderen Reiseinteressierten 
+         weiterzuhelfen.
+   </p>
+   <p> Hi, I'm Thomas, 19 years old, a student and would like to take you guys on my backpacking journey through South America.
+         I know that it is quite hard to organise trips and I myself still have a lot to learn, which is why I've started this blog not 
+         only as a way to prepare, plan, structure and to documente my trip, but hopefully also as a way to help other travel enthusiasts, 
+         who are planning on doing the same.
+   </p>
+   
+{% endblock %}
 
 

@@ -22,9 +22,7 @@
         <header>
             <nav>
                <ul class="nav__links">
-                <div class='check'>
                   <li><a href="{% url 'checklist' %}">Checklist</a></li>
-               </div>
                   <div class="dropdown">
                      <li> <a href="/">Posts</a></li>
                      <div class="dropdown-content">
@@ -33,9 +31,7 @@
                         <a href="#">Activities</a>
                     </div>
                   </div>
-                  <div class='abouts'>
-                     <li><a href="{% url 'abouts_detail' %}">About</a></li>
-                  </div>
+                     <li><a href="{% url 'about' %}">About</a></li>
                   <button type="submit"><i class="fa fa-search"></i></button>
                 </div>
                </ul>
