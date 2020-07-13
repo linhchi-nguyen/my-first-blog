@@ -536,7 +536,7 @@ h4 {
    text-decoration-line: line-through;
    text-decoration-color: rgb(0, 30, 255);
    text-decoration-thickness: 2px;
-   text-transform: capitalize;
+   text-transform: none;
 }
 
 .edit {
